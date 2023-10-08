@@ -1,0 +1,31 @@
+{
+  "name": "portal-opendev",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "npm run build && next export"
+  },
+  "dependencies": {
+    "netlify-cms-app": "^2.15.72",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "overrides": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "frontmatter-markdown-loader": "^3.7.0",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,21 @@
+backend:
+  name: test-repo
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: public/img
+public_folder: img
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Events"
+        name: "events page"
+        file: "src/content/events.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Events"
+            name: "events"
+            widget: list
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
