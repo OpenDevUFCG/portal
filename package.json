@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "npm run build && next export"
+    "export": "npm run build"
   },
   "dependencies": {
     "netlify-cms-app": "^2.15.72",
-    "next": "13.5.4",
+    "next": "13.4.13",
     "react": "^18",
     "react-dom": "^18"
   },
