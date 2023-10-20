@@ -11,7 +11,7 @@ export interface GalleryImage {
   alt: string;
 }
 
-export interface Testimony {
+export interface Testimonial {
   author: string;
   content: string;
 }
@@ -23,7 +23,7 @@ export interface Event {
   description: string;
   sponsors: Sponsor[];
   gallery: GalleryImage[];
-  testimonials: Testimony[];
+  testimonials: Testimonial[];
 }
 
 export interface EventsCMS {

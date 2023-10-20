@@ -91,6 +91,10 @@
   color: var(--gray-500);
 }
 
+.testimonial-card svg {
+  margin: auto;
+}
+
 .testimonial-card p {
   line-height: 1rem;
   letter-spacing: 0.125rem;

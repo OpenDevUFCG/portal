@@ -1,20 +1,22 @@
-import { Testimony } from "@/interfaces/Events";
+import { Testimonial } from "@/interfaces/Events";
+import { FaQuoteRight } from "react-icons/fa";
 
 type TestimonialCardProps = {
-  testimony: Testimony;
+  testimonial: Testimonial;
 };
 
-const TestimonialCard = ({ testimony }: TestimonialCardProps) => {
+const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     <div className="testimonial-card">
-      <p>{testimony.content}</p>
-      <p className="testimonial-author">{testimony.author}</p>
+      <FaQuoteRight size={32} />
+      <p>{testimonial.content}</p>
+      <p className="testimonial-author">{testimonial.author}</p>
     </div>
   );
 };
 
 type TestimonialsSectionProps = {
-  testimonials: Testimony[];
+  testimonials: Testimonial[];
 };
 
 const TestimonialsSection = ({ testimonials }: TestimonialsSectionProps) => {
@@ -22,8 +24,8 @@ const TestimonialsSection = ({ testimonials }: TestimonialsSectionProps) => {
     <div className="testimonials-box">
       <h2 className="section-title">DEPOIMENTOS</h2>
       <div className="testimonials-list">
-        {testimonials.map((testimony) => (
-          <TestimonialCard key={testimony.author} testimony={testimony} />
+        {testimonials.map((testimonial) => (
+          <TestimonialCard key={testimonial.author} testimonial={testimonial} />
         ))}
       </div>
     </div>
