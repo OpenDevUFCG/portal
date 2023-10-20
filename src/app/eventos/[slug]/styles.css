@@ -34,6 +34,7 @@
 
 .banner-title {
   font-size: 3rem;
+  text-align: center;
   color: var(--blue-700);
 }
 
@@ -56,6 +57,7 @@
 
 .sponsor-card img {
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .sponsor-card p {
@@ -140,7 +142,7 @@
 
 @media screen and (max-width: 600px) {
   .page-box {
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .section-title {
@@ -150,6 +152,10 @@
   .section-box {
     gap: 1rem;
     padding: 1.5rem 1rem;
+  }
+
+  .banner-title {
+    font-size: 2rem;
   }
 
   .testimonials-list {

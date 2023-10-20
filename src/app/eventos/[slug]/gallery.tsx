@@ -1,6 +1,7 @@
 "use client";
 
 import { GalleryImage } from "@/interfaces/Events";
+import { resolveImagePath } from "@/utils/image";
 import { useMemo, useState } from "react";
 import PhotoGallery from "react-photo-gallery";
 
@@ -14,7 +15,10 @@ const GallerySection = ({ images }: GallerySectionProps) => {
   const [imageSlice, setImageSlice] = useState(1);
 
   const renderedImages = useMemo(
-    () => images.slice(0, imageSlice * IMAGES_SLICE_SIZE),
+    () =>
+      images
+        .slice(0, imageSlice * IMAGES_SLICE_SIZE)
+        .map((image) => ({ ...image, src: resolveImagePath(image.src) })),
     [imageSlice, images]
   );
 

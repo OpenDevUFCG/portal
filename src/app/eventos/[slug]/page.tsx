@@ -8,6 +8,7 @@ import { RedirectType, redirect } from "next/navigation";
 import GallerySection from "./gallery";
 import SponsorsSection from "./sponsors";
 import TestimonialsSection from "./testimonials";
+import { resolveImagePath } from "@/utils/image";
 
 export async function generateStaticParams() {
   const content: CMS<EventsCMS> = await import(`@/content/${"events"}.md`);
@@ -41,7 +42,7 @@ export default async function EventPage({
           <img
             width="100%"
             height="auto"
-            src={event.banner}
+            src={resolveImagePath(event.banner)}
             alt="Imagem principal do evento"
           />
         )}

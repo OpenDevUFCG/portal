@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { Sponsor } from "@/interfaces/Events";
-import Image from "next/image";
+import { resolveImagePath } from "@/utils/image";
 
 type SponsorCardProps = {
   sponsor: Sponsor;
@@ -9,10 +10,10 @@ const SponsorCard = ({ sponsor }: SponsorCardProps) => {
   return (
     <div className="sponsor-card">
       <a href={sponsor.link} target="_blank">
-        <Image
+        <img
           width={100}
           height={100}
-          src={sponsor.logo}
+          src={resolveImagePath(sponsor.logo)}
           alt={`logo do patrocionador ${sponsor.name}`}
         />
       </a>
