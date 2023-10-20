@@ -1,0 +1,168 @@
+.page-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.section-title {
+  color: var(--blue-700);
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.section-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  max-width: 1328px;
+  width: 100%;
+}
+
+.section-box p {
+  line-height: 1rem;
+  letter-spacing: 0.125rem;
+  color: var(--gray-500);
+  text-align: justify;
+}
+
+/* Banner section */
+
+.banner-title {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--blue-700);
+}
+
+/* Sponsors section */
+
+.sponsors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sponsor-card img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.sponsor-card p {
+  color: var(--blue-700);
+  font-weight: 700;
+}
+
+/* Testimonials section */
+
+.testimonials-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--gray-100);
+}
+
+.testimonials-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  max-width: 400px;
+  background-color: var(--white);
+  padding: 2.5rem;
+  color: var(--gray-500);
+}
+
+.testimonial-card svg {
+  margin: auto;
+}
+
+.testimonial-card p {
+  line-height: 1rem;
+  letter-spacing: 0.125rem;
+}
+
+.testimonial-author {
+  color: var(--blue-700);
+  font-weight: 500;
+}
+
+.gallery-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-list img {
+  transition: all 0.2s ease-in;
+  border-radius: 0.5rem;
+}
+
+.gallery-list img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-list button {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin: auto;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--blue-700);
+  border: 1px solid var(--blue-700);
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.gallery-list button:hover {
+  transform: scale(1.01);
+}
+
+@media screen and (max-width: 600px) {
+  .page-box {
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-box {
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-list {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+}
