@@ -1,10 +1,12 @@
 ---
 title: Events
 events:
-  - name: Hacktoberfest
-    slug: hacktoberfest
+  - name: Hacktoberfest 2022
+    slug: hacktoberfest-2022
     description: Hacktoberfest description.
-  - name: Andromedev
-    slug: andromedev
-    description: Lil Bub is an American celebrity cat known for her unique appearance.
+    banner: img/image-1-1-.png
+    sponsors:
+      - name: Clicampo
+        logo: img/frame.png
+        link: https://arado.com.br/
 ---
