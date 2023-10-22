@@ -1,0 +1,46 @@
+.fsAboutUs {
+  background-image: linear-gradient(#4979b7, #393a6e);
+  color: #ffffff;
+  padding: 6.6rem 0 8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  letter-spacing: 0.125em;
+  margin: 0 1rem;
+
+  overflow: hidden;
+}
+
+.fsAboutUs > h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.fsAboutUs > p {
+  padding: 0 10%;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.fsAboutUsCarousel {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fsAboutUsCarouselItem {
+  background-color: crimson;
+  max-width: 25rem;
+  margin: 7.4rem 1rem 0 1rem;
+  flex-shrink: 0;
+}
+
+.fsAboutUsCarouselItem h3 {
+  font-size: 28px;
+  line-height: 33px;
+  margin: 2rem 0 1.1rem 0;
+}
