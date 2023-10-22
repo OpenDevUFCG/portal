@@ -30,17 +30,41 @@
 .fsAboutUsCarousel {
   display: flex;
   justify-content: space-around;
+
+  /* overflow-x: auto; */
+  scroll-snap-type: x mandatory;
 }
 
 .fsAboutUsCarouselItem {
-  background-color: crimson;
   max-width: 25rem;
-  margin: 7.4rem 1rem 0 1rem;
-  flex-shrink: 0;
+  padding: 7.4rem 1rem 1rem 1rem;
 }
 
-.fsAboutUsCarouselItem h3 {
+.fsAboutUsCarouselItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsAboutUsCarouselItem > h3 {
   font-size: 28px;
   line-height: 33px;
   margin: 2rem 0 1.1rem 0;
+}
+
+@media (max-width: 768px) {
+  .fsAboutUsCarousel {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: start;
+  }
+
+  .fsAboutUsCarouselItem {
+    min-width: 100%;
+    flex-shrink: 0;
+    max-width: 100%;
+    scroll-snap-align: start;
+    min-height: 100px;
+  }
 }
