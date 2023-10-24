@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import './CoreMember.css'
 interface MemberProps{
     name: string;
     github: string;
@@ -7,14 +7,19 @@ interface MemberProps{
 }
 
 function CoreMember (props : MemberProps){
-    let ghUsername = props.github;
-    let name = props.name;
 
-    // fetch from Github API
-    // show tooltip on hover
+    const username = props.github;
+    const name = props.name;
 
-    return (<div>
-        <img src ="" alt = {`Foto Perfil ${name}`}></img>
+    const imgUrl = "https://avatars.githubusercontent.com/u/50351113?v=4"
+    
+    // TO DO: fetch imgUrl from github API
+    
+    // TO DO: show tooltip on hover
+
+    return (
+    <div>
+        <img src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
     </div>);
 }
 
