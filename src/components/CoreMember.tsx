@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import './CoreMember.css'
+
 interface MemberProps{
     name: string;
     github: string;
@@ -20,14 +21,22 @@ function CoreMember (props : MemberProps){
         const url = `https://api.github.com/users/${username}`
 
         fetch(url)
-        .then(res => res.json())
+        .then((res) => {
+            if (res.ok){
+                return res.json();
+            } else{
+                throw new Error("Error fetching Github API")
+            }
+        })
         .then( (data) => {
             setImgUrl(data.avatar_url);
             setLoading(false)
         })
         .catch( (err) => {
-            console.error("Error fetching Github API:", err)
+            console.error("Error loading Member Avatar:", err);
+            setImgUrl("/assets/icons/github.svg");
             setLoading(false);
+            console.log("a")
         })
     }, [username]);
     
@@ -36,8 +45,7 @@ function CoreMember (props : MemberProps){
     if (loading){
         return (
             <div className = 'core-member-container' title={name}>
-                
-                <img src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
+                <img src = "/assets/icons/github.svg" alt = {`Foto Perfil ${name}`}/>
             </div>)
     }
 
