@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import './CoreMember.css'
+import styles from './coremember.module.css'
 
 interface MemberProps{
     name: string;
@@ -43,20 +43,20 @@ function CoreMember (props : MemberProps){
 
     if (loading){
         return (
-            <div className = 'core-member-container' title={name}>
+            <div className = {styles['core-member-container']} title={name}>
                 <a href={`https://github.com/${username}`}>
-                    <span className='tooltip'><img src='/assets/icons/github.svg'/> {name}</span>
+                    <span className={styles.tooltip}><img src='/assets/icons/github.svg'/> {name}</span>
                 </a>
-                <img className= 'core-member-img' src = "/assets/icons/github.svg" alt = {`Foto Perfil ${name}`}/>
+                <img className= {styles['core-member-img']} src = "/assets/icons/github.svg" alt = {`Foto Perfil ${name}`}/>
             </div>)
     }
 
     return (
-    <div className = 'core-member-container' title={name}>
+    <div className = {styles['core-member-container'] }title={name}>
         <a href={`https://github.com/${username}`}>
-            <span className='tooltip'><img src='/assets/icons/github.svg'/> {name}</span>
+            <span className={styles.tooltip}><img src='/assets/icons/github.svg'/> {name}</span>
         </a>
-        <img className= 'core-member-img' src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
+        <img className= {styles['core-member-img']} src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
     </div>);
 }
 
