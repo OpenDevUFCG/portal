@@ -2,14 +2,10 @@
   background-image: linear-gradient(#4979b7, #393a6e);
   color: #ffffff;
   padding: 6.6rem 0 8rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   border-radius: 25px;
   letter-spacing: 0.125em;
   margin: 0 1rem;
-
   overflow: hidden;
 }
 
@@ -30,17 +26,13 @@
 .fsAboutUsCarousel {
   display: flex;
   justify-content: space-around;
-
-  /* overflow-x: auto; */
+  align-items: flex-start;
   scroll-snap-type: x mandatory;
 }
 
 .fsAboutUsCarouselItem {
   max-width: 25rem;
   padding: 7.4rem 1rem 1rem 1rem;
-}
-
-.fsAboutUsCarouselItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,18 +45,17 @@
   margin: 2rem 0 1.1rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 995px) {
   .fsAboutUsCarousel {
     width: 100%;
     overflow-x: auto;
     justify-content: start;
   }
+}
 
+@media (max-width: 768px) {
   .fsAboutUsCarouselItem {
     min-width: 100%;
-    flex-shrink: 0;
-    max-width: 100%;
     scroll-snap-align: start;
-    min-height: 100px;
   }
 }
