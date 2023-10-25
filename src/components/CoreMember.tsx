@@ -40,20 +40,23 @@ function CoreMember (props : MemberProps){
         })
     }, [username]);
     
-    // TO DO: show tooltip on hover
 
     if (loading){
         return (
             <div className = 'core-member-container' title={name}>
-                <img src = "/assets/icons/github.svg" alt = {`Foto Perfil ${name}`}/>
+                <a href={`https://github.com/${username}`}>
+                    <span className='tooltip'><img src='/assets/icons/github.svg'/> {name}</span>
+                </a>
+                <img className= 'core-member-img' src = "/assets/icons/github.svg" alt = {`Foto Perfil ${name}`}/>
             </div>)
     }
 
     return (
     <div className = 'core-member-container' title={name}>
         <a href={`https://github.com/${username}`}>
-            <img src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
+            <span className='tooltip'><img src='/assets/icons/github.svg'/> {name}</span>
         </a>
+        <img className= 'core-member-img' src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
     </div>);
 }
 
