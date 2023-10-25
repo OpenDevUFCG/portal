@@ -34,7 +34,7 @@ export default function AboutUs() {
           return (
             <div key={index} className={styles.fsAboutUsCarouselItem}>
               <svg>
-                <use href={`/about-us-icons.svg#${item.svg}`} fill="#ffff" />
+                <use href={`/about-us-icons.svg#${item.svg}`} />
               </svg>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
