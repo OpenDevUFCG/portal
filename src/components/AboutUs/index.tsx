@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./about-us.module.css";
 
 const itemListing = [
@@ -22,7 +21,7 @@ const itemListing = [
   },
 ];
 
-export default async function AboutUs() {
+export default function AboutUs() {
   return (
     <section className={styles.fsAboutUs}>
       <h2>Sobre nós</h2>
@@ -35,7 +34,7 @@ export default async function AboutUs() {
           return (
             <div key={index} className={styles.fsAboutUsCarouselItem}>
               <svg>
-                <use href={`/icons.svg#${item.svg}`} fill="#ffff" />
+                <use href={`/about-us-icons.svg#${item.svg}`} fill="#ffff" />
               </svg>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
