@@ -21,7 +21,12 @@ function CoreMember (props : MemberProps){
     useEffect( () => {
         const url = `https://api.github.com/users/${username}`
 
-        fetch(url)
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `token ${process.env.NEXT_PUBLIC_GH_TOKEN}`
+            }
+        })
         .then((res) => {
             if (res.ok){
                 return res.json();
