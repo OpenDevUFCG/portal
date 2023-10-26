@@ -1,4 +1,4 @@
-import { SubSection } from "@/components/SubSection";
+import { SubSection } from "@/components/SubSection/index";
 
 export default async function HomePage() {
   return (
