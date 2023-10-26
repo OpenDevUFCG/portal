@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './coremember.module.css'
+import {FaGithub} from 'react-icons/fa'
 
 interface MemberProps{
     name: string;
@@ -36,7 +37,6 @@ function CoreMember (props : MemberProps){
             console.error("Error loading Member Avatar:", err);
             setImgUrl("/assets/icons/github.svg");
             setLoading(false);
-            console.log("a")
         })
     }, [username]);
     
@@ -45,16 +45,16 @@ function CoreMember (props : MemberProps){
         return (
             <div className = {styles['core-member-container']} title={name}>
                 <a href={`https://github.com/${username}`}>
-                    <span className={styles.tooltip}><img src='/assets/icons/github.svg'/> {name}</span>
+                    <span className={styles.tooltip}><FaGithub className= {styles['tooltip-icon']}/> {name}</span>
                 </a>
-                <img className= {styles['core-member-img']} src = "/assets/icons/github.svg" alt = {`Foto Perfil ${name}`}/>
+                <FaGithub className= {styles['core-member-img']} alt = {`Foto Perfil ${name}`}/>
             </div>)
     }
 
     return (
     <div className = {styles['core-member-container'] }title={name}>
         <a href={`https://github.com/${username}`}>
-            <span className={styles.tooltip}><img src='/assets/icons/github.svg'/> {name}</span>
+            <span className={styles.tooltip}><FaGithub className= {styles['tooltip-icon']}/> {name}</span>
         </a>
         <img className= {styles['core-member-img']} src = {imgUrl} alt = {`Foto Perfil ${name}`}/>
     </div>);
