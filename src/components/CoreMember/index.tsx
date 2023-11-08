@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './coremember.module.css'
 import {FaGithub} from 'react-icons/fa'
+import useFetchGithubUserData from '@/utils/useFetchGithubUserData';
 
 interface MemberProps{
     name: string;
@@ -11,40 +12,10 @@ interface MemberProps{
 }
 
 function CoreMember (props : MemberProps){
-    const [imgUrl, setImgUrl] = useState("");
-    const [loading, setLoading] = useState(true);
-
     const username = props.github;
     const name = props.name;
-    
-    // TO DO: add auth to github
-    useEffect( () => {
-        const url = `https://api.github.com/users/${username}`
 
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'Authorization': `token ${process.env.NEXT_PUBLIC_GH_TOKEN}`
-            }
-        })
-        .then((res) => {
-            if (res.ok){
-                return res.json();
-            } else{
-                throw new Error("Error fetching Github API")
-            }
-        })
-        .then( (data) => {
-            setImgUrl(data.avatar_url);
-            setLoading(false)
-        })
-        .catch( (err) => {
-            console.error("Error loading Member Avatar:", err);
-            setImgUrl("/assets/icons/github.svg");
-            setLoading(false);
-        })
-    }, [username]);
-    
+    const{imgUrl, loading} = useFetchGithubUserData(username);
 
     if (loading){
         return (
